@@ -10,8 +10,7 @@ const TableData = () => {
   const itemsPerPage = 10;
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const maxPageNumbersToShow = 10; // New constant for the maximum number of page buttons to display
-
+  const maxPageNumbersToShow = 10; 
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -58,7 +57,6 @@ const TableData = () => {
     let startPage = Math.max(1, currentPage - Math.floor(maxPageNumbersToShow / 2));
     let endPage = Math.min(totalPages, startPage + maxPageNumbersToShow - 1);
 
-    // Adjust startPage if we're at the end to ensure maxPageNumbersToShow are always visible
     if (endPage - startPage + 1 < maxPageNumbersToShow) {
       startPage = Math.max(1, endPage - maxPageNumbersToShow + 1);
     }
@@ -80,7 +78,6 @@ const TableData = () => {
       );
     }
 
-    // Add ellipsis for pages at the beginning if not showing from page 1
     if (startPage > 1) {
       pageNumbers.unshift(
         <span key="ellipsis-start" className="pagination-ellipsis">
@@ -101,7 +98,6 @@ const TableData = () => {
       );
     }
 
-    // Add ellipsis for pages at the end if not showing till the last page
     if (endPage < totalPages) {
       pageNumbers.push(
         <span key="ellipsis-end" className="pagination-ellipsis">
@@ -192,7 +188,7 @@ const TableData = () => {
           </div>
         </div>
 
-        {totalPages > 1 && ( // Only show pagination if there's more than one page
+        {totalPages > 1 && ( 
           <div className="pagination-controls">
             <button
               onClick={() => goToPage(currentPage - 1)}
