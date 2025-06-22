@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+#---->>>> Tender Data Table Application <<<<-----
+This project is a React-based web application designed to display tender data in a searchable, and interactive table. It fetches data from a backend API and provides features like search by title or supplier name and navigation to tender details.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Data Display: Shows tender information including ID, Title, Supplier Name, Deadline, and Value.
+Search Functionality: Users can search for tenders by title or awarded supplier name.
+Loading Indicator: A visual loader is displayed while data is being fetched.
+Row Interaction: Clicking on a table row navigates to a detailed view of that specific tender (assuming a /tender/:id route exists).
 
-## Available Scripts
+Technologies Used:
+React.js: Frontend library for building the user interface.
+Axios: Promise-based HTTP client for making API requests.
+React Router DOM: For client-side routing to navigate between pages (e.g., to tender detail view).
+CSS: For styling the application.
 
-In the project directory, you can run:
+Prerequisites
+Before you begin, ensure you have the following installed:
+Node.js: (LTS version recommended) - Includes npm (Node Package Manager). You can download it from nodejs.org.
+npm or Yarn: Package manager for JavaScript. npm comes with Node.js. If you prefer Yarn, you can install it via npm install -g yarn.
 
-### `npm start`
+Getting Started
+Follow these steps to get the project up and running on your local machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the Repository
+   If your project is in a Git repository, clone it using:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone <your-repository-url>
+cd <your-project-folder>
 
-### `npm test`
+If it's a local folder, navigate to your project directory.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install Dependencies
+   Navigate into your project directory and install the necessary npm packages:
 
-### `npm run build`
+cd your-project-name # if you cloned it
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# OR
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+yarn install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Backend API (Important)
+   This application relies on a backend API endpoint /api/es/tenders to fetch data. You will need to ensure this API is running and accessible.
 
-### `npm run eject`
+If you have a separate backend project: Start your backend server according to its instructions. Ensure it's configured to serve data on /api/es/tenders.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you don't have a backend yet: The app will likely show a "Data fetching error" in the console and the loader will disappear without data. For local development, you might consider setting up a mock API using tools like json-server or configuring your package.json proxy if your backend runs on a different port.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Example (Proxy in package.json): If your backend runs on http://localhost:5000, add this to your package.json file:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+// Inside your package.json, typically after "name" and "version"
+"proxy": "http://localhost:5000",
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This tells the development server to proxy unknown requests to your backend.
 
-## Learn More
+4. Run the Application
+   Once dependencies are installed and your backend API is ready (or you've configured a proxy), you can start the React development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# OR
 
-### Code Splitting
+yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This command will:
+Start the development server.
+Open the application in your default web browser at http://localhost:3000 (or another available port).
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+I have added Images of the application in the src/assets/Screenshotsofapplication folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I have made this Responsive , so that it can work at any devices
