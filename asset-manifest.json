@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vopa-asmt-new/static/css/main.409825ac.css",
+    "main.js": "/vopa-asmt-new/static/js/main.b85da696.js",
+    "static/js/453.b2b69c3e.chunk.js": "/vopa-asmt-new/static/js/453.b2b69c3e.chunk.js",
+    "index.html": "/vopa-asmt-new/index.html",
+    "main.409825ac.css.map": "/vopa-asmt-new/static/css/main.409825ac.css.map",
+    "main.b85da696.js.map": "/vopa-asmt-new/static/js/main.b85da696.js.map",
+    "453.b2b69c3e.chunk.js.map": "/vopa-asmt-new/static/js/453.b2b69c3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.409825ac.css",
+    "static/js/main.b85da696.js"
+  ]
+}
